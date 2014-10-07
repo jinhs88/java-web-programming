@@ -24,6 +24,7 @@ public class AnswerDao {
 			pstmt.setString(2, answer.getContents());
 			pstmt.setTimestamp(3, new Timestamp(answer.getTimeFromCreateDate()));
 			pstmt.setLong(4, answer.getQuestionId());
+			System.out.println(pstmt.toString());
 			pstmt.executeUpdate();
 		} finally {
 			if (pstmt != null) {
